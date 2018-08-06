@@ -4,10 +4,10 @@
 ## 资料
 
 - [《red，不红不专，但性感》](https://zhuanlan.zhihu.com/p/27998473)，从各方面介绍 Red 和 Red/System
-- [Red/System 语言规范](https://static.red-lang.org/red-system-specs-light.html)，[前半部分的中文翻译](https://github.com/red/red/wiki/%5Bzh-hans%5D-Red-System-Language-Specification-Chinese-Traslation)
+- [Red/System 语言规范](https://static.red-lang.org/red-system-specs-light.html)，前半部分的[中文翻译](https://github.com/red/red/wiki/%5Bzh-hans%5D-Red-System-Language-Specification-Chinese-Traslation)
 - [Notes about Porting C code to Red System](https://github.com/red/red/wiki/Notes-about-Porting-C-code-to-Red-System)，晴天刚写的关于 Red/System 与 C/C++ 的一些兼容事项，必看
-- [用 C 从零开始实现 JSON 库的教程](https://github.com/miloyip/json-tutorial)，本篇记录源于我用 `Red/System` 抄了一遍（https://github.com/haolloyin/reds-json）之后的体会
-- [Red 官网](https://red-lang.org)，[Red 代码风格][https://doc.red-lang.org/zh-hans/style-guide.html]（Red/System 与此类似）
+- [用 C 从零开始实现 JSON 库的教程](https://github.com/miloyip/json-tutorial)，本篇记录源于我用 `Red/System` [抄了一遍](https://github.com/haolloyin/reds-json)之后的体会
+- [Red 官网](https://red-lang.org)，[Red 代码风格](https://doc.red-lang.org/zh-hans/style-guide.html)（Red/System 与此类似）
 
 
 ## 为什么用 Red/System？
@@ -20,7 +20,6 @@ Red/System 是与 C 相同层次的编程语言，所以我才能用 Red/System 
 3. **工具链小巧，支持跨平台交叉编译。**1.2 MB 的二进制程序足矣，不用折腾其他东西。
 4. **与 C/C++ 无缝兼容。**只要 import 对应的 dll 文件，写上对应的桥接代码，就能在 Red/System 中使用。
 5. **有命名空间。**
-
 
 ## 使用 Red/System 时遇到的问题
 
