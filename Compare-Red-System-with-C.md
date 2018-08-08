@@ -27,7 +27,7 @@ Red/System 是与 C 相同层次的编程语言，所以我才能用 Red/System 
 A!: alias struct! [s [B!]]  ; Compilation Error: invalid struct syntax: [s [B!]]
 B!: alias struct! [s [A!]]
 
-A!: alias struct! [ptr [byte-ptr!]] ; s 是通用指针，用 as B! ptr 来转型成对应的 B!
+A!: alias struct! [p [byte-ptr!]] ; p 是通用指针，用 as B! p 来转型成对应的 B!
 B!: alias struct! [s [A!]]
 ```
 
@@ -53,7 +53,7 @@ a/(i+1): 22 ; Compilation Error: attempt to use pointer indexing with a non-inte
 1. 一切都是传值
 2. 基础数据类型只有 `integer! | byte! | float! | float32! | pointer!`，指针只能用于前面 4 个
 3. 没有指针的指针
-4. 结构体 `struct!` 本身就是指针，指向变量所代表的内存起始地址
+4. 结构体 `struct!` 本身就是指针，指向结构体所在内存的起始地址
 5. 综上，如果要实现指针的指针，或函数返回多个值，可以考虑用 `struct!` 来包一层，例如 `Red/System` 里的 [str-array](https://github.com/red/red/blob/master/system/runtime/common.reds#L79-L81)，[源码实例](https://static.red-lang.org/red-system-specs-light.html#section-13.2)
 6. 函数内的 `/local` 局部变量支持类型推断，可以稍微偷懒一下
 7. [c-string!](https://static.red-lang.org/red-system-specs-light.html#section-4.6) 是 `[pointer! [byte!]]` 末尾加 `null` 字节（即 [#"^(00)"](https://github.com/red/red/blob/master/system/runtime/common.reds#L34)）
